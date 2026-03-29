@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+venv/
+**/venv/
+.env
+**/.env
+
+# Build outputs
+.next/
+**/.next/
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+.cursor/
+
+# OS files
+.DS_Store
+
+# DB files
+shared/*.db*
+*.db
+*.db-shm
+*.db-wal
+
+# Vercel
+.vercel
+
+# Payload default media upload directory
+frontend/public/media/
