@@ -39,6 +39,29 @@ export const Posts: CollectionConfig = {
       label: '제목',
     },
     {
+      name: 'meta',
+      type: 'group',
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+        },
+        {
+          name: 'image',
+          type: 'upload',
+          relationTo: 'media',
+        },
+      ],
+      admin: {
+        position: 'sidebar',
+      },
+      label: 'SEO 메타 데이터',
+    },
+    {
       name: 'category',
       type: 'relationship',
       relationTo: 'categories',
