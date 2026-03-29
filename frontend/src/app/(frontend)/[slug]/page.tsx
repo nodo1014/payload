@@ -21,9 +21,6 @@ export async function generateStaticParams() {
     limit: 1000,
     overrideAccess: false,
     pagination: false,
-    select: {
-      slug: true,
-    },
   })
 
   const params = pages.docs

@@ -1,18 +1,12 @@
 import type { CollectionConfig } from 'payload'
 import { anyone } from '../../access/anyone'
 import { authenticated } from '../../access/authenticated'
-import {
-  MetaDescriptionField,
-  MetaImageField,
-  MetaTitleField,
-  OverviewField,
-  PreviewField,
-} from '../../fields/meta'
+import { slugField } from 'payload'
 
 export const Posts: CollectionConfig = {
   slug: 'posts',
   admin: {
-    defaultColumns: ['title', 'category', 'views', 'createdAt'],
+    defaultColumns: ['title', 'slug', 'category', 'views', 'createdAt'],
     useAsTitle: 'title',
   },
   access: {
@@ -79,5 +73,6 @@ export const Posts: CollectionConfig = {
       hasMany: true,
       label: '첨부파일',
     },
+    slugField(),
   ],
 }

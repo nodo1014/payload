@@ -253,6 +253,11 @@ export interface Post {
   aiSummary?: string | null;
   author: string | User;
   files?: (string | Media)[] | null;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -1207,6 +1212,8 @@ export interface PostsSelect<T extends boolean = true> {
   aiSummary?: T;
   author?: T;
   files?: T;
+  generateSlug?: T;
+  slug?: T;
   updatedAt?: T;
   createdAt?: T;
 }

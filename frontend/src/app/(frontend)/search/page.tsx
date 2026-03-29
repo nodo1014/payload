@@ -21,12 +21,6 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
     collection: 'search',
     depth: 1,
     limit: 12,
-    select: {
-      title: true,
-      slug: true,
-      categories: true,
-      meta: true,
-    },
     // pagination: false reduces overhead if you don't need totalDocs
     pagination: false,
     ...(query
